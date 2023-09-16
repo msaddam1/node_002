@@ -17,4 +17,14 @@ app.post('/',async (req,res)=>{
     res.send(result);
 });
 
+
+app.put('/',async (req,res)=>{
+    let data = await dbConnect();
+    let result = await data.updateOne(
+        {name:'galaxy s'},
+        {$set:{price:1000}}
+    );
+    res.send({result:"updated"})
+});
+
 app.listen(5000);
