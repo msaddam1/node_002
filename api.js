@@ -27,4 +27,12 @@ app.put('/:name',async (req,res)=>{
     res.send({result:"updated"})
 });
 
+
+app.delete('/:price',async (req,res)=>{
+    console.log(req.params.price);
+    let data = await dbConnect();
+    let result = await data.deleteOne({price:420});
+    res.send(result)
+});
+
 app.listen(5000);
