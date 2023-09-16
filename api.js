@@ -18,10 +18,10 @@ app.post('/',async (req,res)=>{
 });
 
 
-app.put('/',async (req,res)=>{
+app.put('/:name',async (req,res)=>{
     let data = await dbConnect();
     let result = await data.updateOne(
-        {name:'galaxy s'},
+        {name: req.params.name},
         {$set:req.body}
     );
     res.send({result:"updated"})
