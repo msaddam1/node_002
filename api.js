@@ -22,7 +22,7 @@ app.put('/',async (req,res)=>{
     let data = await dbConnect();
     let result = await data.updateOne(
         {name:'galaxy s'},
-        {$set:{price:1000}}
+        {$set:req.body}
     );
     res.send({result:"updated"})
 });
