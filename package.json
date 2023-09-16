@@ -1,0 +1,26 @@
+{
+  "name": "node_02",
+  "version": "1.0.0",
+  "description": "nodejs connect with mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/msaddam1/node_002.git)"
+  },
+  "keywords": [
+    "learning",
+    "by",
+    "Saddam"
+  ],
+  "author": "Saddam",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^6.1.0",
+    "simple-node-logger": "^21.8.12"
+  }
+}
